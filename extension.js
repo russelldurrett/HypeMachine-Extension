@@ -93,8 +93,8 @@ var main = function() {
               var download_button = document.createElement("a");
               download_button.target = "_top";
               download_button.href = download_url;
-              download_button.className = "DownloadSongButton";
-              download_button.download = artist + ' - ' + title + '.mp3';
+              //download_button.className = "DownloadSongButton";
+              download_button.download =  artist + ' - ' + title + '.mp3';
               download_button.innerHTML = '<table class="arrow"><tr><td><div class="rect-arrow"></div></td></tr><tr><td class="'+triArrowString+     '"></td></tr></table>';
               jQuery(track).prepend('<li class="dl"><table class="spacer"></table>' + jQuery(download_button)[0].outerHTML + '</li>');
             });
@@ -107,10 +107,10 @@ var main = function() {
   };//buttonscript
   
   
-  jQuery('ul.tools').on('click', '.DownloadSongButton', function() {
-    console.log( "Downloading - " + jQuery(this)[0].download );
-    _dlExtGATracker('send', 'event', 'download', 'click', 'song-downloads', 1);
-  });
+  // jQuery('ul.tools').on('click', '.DownloadSongButton', function() {
+  //   console.log( "Downloading - " + jQuery(this)[0].download );
+  //   _dlExtGATracker('send', 'event', 'download', 'click', 'song-downloads', 1);
+  // });
 	
 	// Run it right away
 	buttonScript();
